@@ -19,7 +19,7 @@
                     <p>
                         Upload Profile Photo:
                         </td><td>
-                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                            <asp:FileUpload ID="ProfilePhoto" runat="server" CssClass="form-control"/>
                     </p>
                 </td>
             </tr>
@@ -27,9 +27,9 @@
             <tr>
                 <td>
                     <p> 
-                        First Name:
+                        Fullname:
                         </td><td>
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="StdsFullName" runat="server" CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
@@ -38,7 +38,7 @@
                     <p>
                         Surname:
                         </td><td>
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="stdsSurname" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
@@ -47,7 +47,7 @@
                     <p>
                         Gender:
                         </td><td>
-                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True">
+                            <asp:RadioButtonList ID="StdsGender" runat="server" AutoPostBack="True">
                                 <asp:ListItem>Male</asp:ListItem>
                                 <asp:ListItem>Female</asp:ListItem>
                             </asp:RadioButtonList>
@@ -57,60 +57,9 @@
             <tr>
                 <td>
                     <p>
-                        Marital Status:
-                        </td><td>
-                            <asp:DropDownList ID="DropDownList5" runat="server">
-                                <asp:ListItem></asp:ListItem>
-                                <asp:ListItem>Maried</asp:ListItem>
-                                <asp:ListItem>Single</asp:ListItem>
-                                <asp:ListItem>Widow</asp:ListItem>
-                            </asp:DropDownList>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Title:
-                        </td><td>
-                            <asp:DropDownList ID="DropDownList6" runat="server">
-                                <asp:ListItem></asp:ListItem>
-                                <asp:ListItem>Mr.</asp:ListItem>
-                                <asp:ListItem>Mrs.</asp:ListItem>
-                                <asp:ListItem>Ms.</asp:ListItem>
-                                <asp:ListItem>Dr.</asp:ListItem>
-                                <asp:ListItem>Prof.</asp:ListItem>
-                            </asp:DropDownList>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
                         D.O.B:
                         </td><td>
-                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Identity Number:
-                        </td><td>
-                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Home Language:
-                        </td><td>
-                            <asp:DropDownList ID="DropDownList9" runat="server">
-                                <asp:ListItem></asp:ListItem>
-                                <asp:ListItem>English</asp:ListItem>
-                            </asp:DropDownList>
+                            <asp:TextBox ID="StdsDOB" runat="server" TextMode="Date"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
@@ -119,7 +68,7 @@
                     <p>
                         Cell Phone Number:
                         </td><td>
-                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="stdsCellnumber" runat="server" TextMode="Number"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
@@ -128,25 +77,23 @@
                     <p>
                         Postal Address:
                         </td><td>
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="Postalstreet" runat="server" placeholder="e.g 7057 John Knox"  CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="Postalcity" runat="server" placeholder="City..."  CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="Postalcountry" runat="server" placeholder="Country..."  CssClass="form-control"></asp:TextBox>
+                            <input ID="PstlAddressTypeHidden" type="hidden" />
+
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>
-                        Town:
+                        Home Address:
                         </td><td>
-                            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Country:
-                        </td><td>
-                            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="Homestreet" runat="server" placeholder="e.g 7057 John Knox"  CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="Homecity" runat="server" placeholder="City..."  CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="Homecountry" runat="server" placeholder="Country..."  CssClass="form-control"></asp:TextBox>
+                            <input ID="HmeAddressTypeHidden" type="hidden" />
                     </p>
                 </td>
             </tr>
@@ -155,7 +102,7 @@
                     <p>
                         Email:
                         </td><td>
-                            <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="StdsEmail" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
@@ -164,7 +111,20 @@
                     <p>
                         Course Name:
                         </td><td>
-                            <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="CourseName" runat="server"  CssClass="form-control"></asp:TextBox>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Course Duration:
+                        </td><td>
+                            <asp:DropDownList ID="CourseDuration" runat="server"  CssClass="form-control">
+                                <asp:ListItem></asp:ListItem>
+                                <asp:ListItem>3-months</asp:ListItem>
+                                <asp:ListItem>6-months</asp:ListItem>
+                            </asp:DropDownList>
                     </p>
                 </td>
             </tr>
@@ -173,7 +133,7 @@
                     <p>
                         Program Type:
                         </td><td>
-                            <asp:DropDownList ID="DropDownList16" runat="server">
+                            <asp:DropDownList ID="ProgramType" runat="server"  CssClass="form-control">
                                 <asp:ListItem></asp:ListItem>
                                 <asp:ListItem>Internship</asp:ListItem>
                                 <asp:ListItem>Project</asp:ListItem>
@@ -186,10 +146,10 @@
                     <p>
                         Program Mode:
                         </td><td>
-                            <asp:DropDownList ID="DropDownList17" runat="server">
+                            <asp:DropDownList ID="ProgramMode" runat="server"  CssClass="form-control">
                                 <asp:ListItem></asp:ListItem>
-                                <asp:ListItem>FullTime</asp:ListItem>
-                                <asp:ListItem>PartTime</asp:ListItem>
+                                <asp:ListItem>Full-Time</asp:ListItem>
+                                <asp:ListItem>Part-Time</asp:ListItem>
                             </asp:DropDownList>
                     </p>
                 </td>
@@ -206,38 +166,36 @@
                 <td><p>
                         Company Name:
                         </td><td>
-                            <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="CompanyName" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p>
-                        Cell Phone Number:
-                        </td><td>
-                            <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        Email:
-                        </td><td>
-                            <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
+                <td><p>
                         Department:
                         </td><td>
-                            <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="CompanyDepartment" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
-
+            <tr>
+                <td>
+                    <p>
+                        Company Telephone:
+                        </td><td>
+                            <asp:TextBox ID="CompanysTelephone" runat="server"  CssClass="form-control"></asp:TextBox>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Company Landline:
+                        </td><td>
+                            <asp:TextBox ID="CompanysLandline" runat="server"  CssClass="form-control"></asp:TextBox>
+                    </p>
+                </td>
+            </tr>
         </table>
 
             <br /><h2><b>Supervisor Details</b></h2><br />
@@ -246,43 +204,44 @@
             <tr>
                 <td>
                     <p>
-                        Supervisor Name:
+                        Supervisors Name:
                         </td><td>
-                            <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="SupervisorsName" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>
-                        Surname:
+                        Supervisors Surname:
                         </td><td>
-                            <asp:TextBox ID="TextBox16" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="SupervisorsSurname" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>
-                        Cell Number:
+                        Supervisors Cellnumber:
                         </td><td>
-                            <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="SupervisorsCellNumber" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>
-                        Email:
+                        Supervisors Email:
                         </td><td>
-                            <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="SupervisorsEmail" runat="server"  CssClass="form-control"></asp:TextBox>
                     </p>
                 </td>
             </tr>
         </table>
         
         
-        <br /><hr /><br />
+        <br />
+        <hr /><br />
 
         <table>
             <tr>
@@ -290,7 +249,7 @@
                     <p>
                         New Password:
                         </td><td>
-                            <input type="password" name="pwd" minlength="8">
+                            <input group="NewPassord" type="password" name="pwd" minlength="8"  CssClass="form-control">
                     </p>
                 </td>
             </tr>
@@ -299,20 +258,20 @@
                     <p>
                         Verify Password:
                         </td><td>
-                            <input type="password" name="pwd" minlength="8">
+                            <input group="NewPassword" type="Password" name="pwd" minlength="8"  CssClass="form-control">
                     </p>
                 </td>
             </tr>
 
         </table><br />
         <p>
-            <asp:CheckBox ID="CheckBox1" runat="server" />
+            <asp:CheckBox ID="CheckBox1" runat="server"  CssClass="form-control" />
             I accept all terms and conditions
         </p>
 
         <aside>
-            <asp:Button ID="Button1" runat="server" Text="Submit" />
-            <asp:Button ID="Button2" runat="server" Text="Clear Form" />
+            <asp:Button ID="SaveButton" runat="server" Text="Submit" OnClick="Button1_Click"  CssClass="form-control" />
+            <asp:Button ID="ClearButton" runat="server" Text="Clear Form" OnClick="Button2_Click"  CssClass="form-control" />
         </aside>
         
 
